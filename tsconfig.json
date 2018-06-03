@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@angeeks/gh-layout": [
+        "dist/angeeks/gh-layout"
+      ],
+      "@angeeks/gh-layout/*": [
+        "dist/angeeks/gh-layout/*"
+      ]
+    }
   }
 }

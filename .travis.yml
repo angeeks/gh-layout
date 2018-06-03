@@ -8,6 +8,8 @@ install:
   - npm i
 script:
   - npx ng lint
+  - npx ng test @angeeks/gh-layout --watch=false
+  - npx ng build @angeeks/gh-layout --prod
   - npx ng test gh-layout --watch=false
   - npx ng build gh-layout --prod --base-href gh-layout
 cache:

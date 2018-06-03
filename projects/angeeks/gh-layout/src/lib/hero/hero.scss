@@ -1,0 +1,32 @@
+$bg-host-default: rgb(245,40,62);
+$bg-host: linear-gradient(142deg, rgba(180,248,251,0.8931290064102564) 0%, rgba(185,184,191,0.4412059294871795) 50%, rgba(251,182,189,0.4988982371794872) 100%);
+
+$c-title: #444;
+$c-title-shadow: #888;
+$c-desc: lighten($c-title, 10);
+
+:host {
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: column;
+  width: 100%;
+  background: $bg-host-default;
+  background: $bg-host;
+  padding: 42px 21px;
+  box-shadow: 0 2px 4px lightgrey;
+  .title {
+    display: flex;
+    font-size: 60px;
+    font-weight: 900;
+    color: $c-title;
+    text-shadow: 2px 3px 5px $c-title-shadow;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .desc {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}

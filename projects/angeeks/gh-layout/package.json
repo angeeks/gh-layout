@@ -1,0 +1,27 @@
+{
+  "name": "@angeeks/gh-layout",
+  "version": "0.0.1",
+  "description": "An angular components collection for angeeks github pages",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "document",
+    "gh-pages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeeks/gh-layout.git"
+  },
+  "homepage": "https://angeeks.github.io/gh-layout",
+  "bugs": {
+    "url": "https://github.com/angeeks/gh-layout/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "normalize.css": "^8.0.0",
+    "@angular/common": "^6.0.0",
+    "@angular/core": "^6.0.0"
+  }
+}
