@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 
-import { BodyComponent } from './body';
-import { HeroComponent } from './hero';
+import { BodyComponent } from './body/body';
+import { HeroComponent } from './hero/hero';
 
 @NgModule({
-  imports: [],
   declarations: [
     HeroComponent,
     BodyComponent
