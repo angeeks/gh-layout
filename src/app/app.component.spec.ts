@@ -1,15 +1,22 @@
+import { fakeAsync, tick } from '@angular/core/testing';
 import { ComponentSuite as Component } from '@angeeks/testing';
-import { AppData } from './app.data';
-import { AppData as MockAppData } from './testing';
+import { LayoutData, LayoutDataApi } from '@angeeks/gh-layout';
+import { LayoutDataApi as MockApi } from '@angeeks/gh-layout/testing';
 
 import { AppComponent as Tag } from './app.component';
 
 Component.suite<Tag>(Tag, (spec) => {
   spec.init({
     providers: [
-      { provide: AppData, useClass: MockAppData }
+      LayoutData,
+      { provide: LayoutDataApi, useClass: MockApi }
     ]
   });
-  spec.expectProperty('title', 'test');
-  spec.expectProperty('desc', 'test');
+  describe('init', () => {
+    beforeEach(fakeAsync(() => {
+      tick();
+    }));
+    spec.expectProperty('title', 'gh-layout');
+    spec.expectProperty('desc', 'test desc');
+  });
 });
