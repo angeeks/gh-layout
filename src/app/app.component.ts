@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AppData } from './app.data';
+import { LayoutData } from '@angeeks/gh-layout';
 
 @Component({
   selector: 'ngk-root',
@@ -10,7 +10,8 @@ import { AppData } from './app.data';
 export class AppComponent {
   title = '';
   desc = '';
-  constructor(private data: AppData) {
+  constructor(private data: LayoutData) {
+    data.init({ name: 'gh-layout' });
     data.repo.subscribe((r: any) => {
       this.title = r.full_name;
       this.desc = r.description;
